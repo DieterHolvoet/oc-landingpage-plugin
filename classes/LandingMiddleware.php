@@ -15,10 +15,12 @@ class LandingMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $response = $next($request);
         $settings = Settings::instance();
 
         if (
             $settings->enabled
+            && $settings->page
             && $request->getPathInfo() !== $settings->page
             && !App::runningInBackend()
             && !(BackendAuth::check() && BackendAuth::getUser()->hasAccess('dieterholvoet.landingpage.circumvent'))
@@ -26,6 +28,6 @@ class LandingMiddleware
             return redirect($settings->page);
         }
 
-        return $next($request);
+        return $response;
     }
 }

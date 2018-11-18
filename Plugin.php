@@ -81,17 +81,6 @@ class Plugin extends PluginBase
     {
         /** @var \October\Rain\Foundation\Http\Kernel $kernel */
         $kernel = $this->app['Illuminate\Contracts\Http\Kernel'];
-        $requiredMiddleware = [
-            StartSession::class,
-            EncryptCookies::class,
-        ];
-
-        /* Fix sessions and cookies not available in LandingMiddleware */
-        foreach ($requiredMiddleware as $middleware) {
-            if (!$kernel->hasMiddleware($middleware)) {
-                $kernel->prependMiddleware($middleware);
-            }
-        }
 
         $kernel->pushMiddleware(LandingMiddleware::class);
     }
