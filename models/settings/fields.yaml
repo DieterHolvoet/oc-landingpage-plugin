@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    enabled:
+        label: dieterholvoet.landingpage::fields.enabled
+        type: switch
+    page:
+        label: dieterholvoet.landingpage::fields.page
+        type: dropdown
+        span: left
