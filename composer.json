@@ -1,0 +1,23 @@
+{
+    "name": "dieterholvoet/oc-landingpage-plugin",
+    "type": "october-plugin",
+    "description": "Provides the possibility to define a page as landing page, redirecting all requests to that page",
+    "keywords": [
+        "october",
+        "octobercms",
+        "landingpage"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dieter Holvoet",
+            "email": "dieter.holvoet@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "composer/installers": "~1.0"
+    },
+    "minimum-stability": "dev"
+}
