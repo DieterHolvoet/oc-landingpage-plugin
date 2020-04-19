@@ -7,6 +7,8 @@ oc-landingpage-plugin
 
 > Provides the possibility to define a page as landing page, redirecting all requests to that page
 
+![Screenshot](https://i.imgur.com/d4bnvsr.png)
+
 ## Installation
 
 This OctoberCMS plugin requires PHP 7.0.8 or higher. It can be
